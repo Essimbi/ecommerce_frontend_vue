@@ -1,6 +1,7 @@
 <script setup>
 import { cartItems } from '@/fake-data';
 import { computed } from 'vue';
+import ProductsList from '@/components/ProductsList.vue';
 
 const totalPrice = computed(() => {
   return cartItems.reduce(
@@ -14,7 +15,7 @@ const totalPrice = computed(() => {
 <template>
     <div id="page-wrap">
       <h1>Shoping cart</h1>
-      
+      <ProductsList :products="cartItems" />
       <h3 id="total-price">$ {{ totalPrice }}</h3>
       <button id="checkout-button">Proceed to checkout</button>
     </div>
