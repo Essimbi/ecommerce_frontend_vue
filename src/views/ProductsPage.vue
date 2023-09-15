@@ -5,14 +5,7 @@ import { products } from '@/fake-data';
 <template>
     <div id="page-wrap">
         <div class="grid-wrap">
-            <div class="product-item" v-for="(product, index) in products" :key="index">
-                <img :src="product.imageUrl" :alt="product.name">
-                <h3 class="product-name"> {{ product.name }} </h3>
-                <p class="product-price">$ {{ product.price }}</p>
-                <router-link :to="'products/'+product.id">
-                    <button>View Details</button>
-                </router-link>
-            </div>
+            
         </div>
     </div>
 </template>
